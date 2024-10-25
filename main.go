@@ -1,8 +1,10 @@
 package main
 
-import(
+import (
 	"net/http"
-    "github.com/gin-gonic/gin"
+	"skb/cmd"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -22,11 +24,11 @@ func main() {
 	router.POST("/", loginEndpoint) 
 
 	// 重定向到 netcap 页面
-	router.GET("/netcap", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "milaoshu.html", nil) // 加载 milaoshu.html 文件，后面改为
+	router.GET("/SkbHandler", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "skbhandler.html", nil) // 加载 milaoshu.html 文件，后面改为
 	})
 
-	router.POST("/netcap", )//处理参数请求ebpf
+	router.POST("/SkbHandler", skbstart)//处理参数请求ebpf
 	
 	router.Run(":8000")
 }
@@ -34,5 +36,9 @@ func main() {
 func loginEndpoint(c *gin.Context){
 	// 登录逻辑，这里暂时为空
 	// 假设登录成功，重定向到 /netcap
-	c.Redirect(http.StatusFound, "/netcap")
+	c.Redirect(http.StatusFound, "/SkbHandler")
+}
+
+func skbstart (c *gin.Context){
+	cmd.Execute(c)
 }

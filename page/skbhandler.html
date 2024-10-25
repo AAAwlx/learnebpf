@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Input</title>
+    <script>
+        function sendCommand() {
+            // 获取选择框中的包类型和输入框中的命令
+            const buffermod = document.getElementById("buffermod").value;
+            const command = document.getElementById("command").value;
+
+            // 构造POST请求体，符合CommandRequest结构
+            const requestBody = {
+                Buffermod: buffermod,
+                Command: command
+            };
+
+            // 发送POST请求
+            fetch("/SkbHandler", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(requestBody)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Command executed:", data);
+                // 在页面中显示服务器返回的结果
+                document.getElementById("response").innerText = `Response: ${data.result}`;
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Command Input</h1>
+
+    <!-- 包类型选择框 -->
+    <label for="buffermod">Packet Type:</label>
+    <select id="buffermod">
+        <option value="skb">skb</option>
+        <option value="raw">raw</option>
+        <option value="mbuf">mbuf</option>
+    </select>
+
+    <br><br>
+
+    <!-- 命令输入框 -->
+    <label for="command">Command:</label>
+    <input type="text" id="command" placeholder="Enter command here">
+
+    <br><br>
+
+    <!-- 启动按钮 -->
+    <button onclick="sendCommand()">Start</button>
+
+    <!-- 显示服务器返回的结果 -->
+    <p id="response"></p>
+
+</body>
+</html>
+
