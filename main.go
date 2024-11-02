@@ -39,6 +39,7 @@ func loginEndpoint(c *gin.Context){
 	c.Redirect(http.StatusFound, "/SkbHandler")
 }
 
+//进入到参数解析模块
 func skbstart (c *gin.Context){
 	cmd.Execute(c)
 }
