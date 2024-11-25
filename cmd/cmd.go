@@ -9,27 +9,6 @@ import(
 	"skb/dump"
 )
 
-var (
-	dumpTraceFunction    string = ""
-	dumpFilterExpression string = ""
-	dumpWriteFilePath    string = ""
-	dumpWriteFileRotate  uint32 = 0
-	dumpTcpdumpFlags     string = "-nn"
-	dumpCount            uint32 = 0
-
-	userFilterFile  string = ""
-	userActionFile  string = ""
-	userOutputColor string = ""
-
-	isDryRun                   bool   = false
-	isGatherStatistic          bool   = false
-	gatherTimeoutSec           uint32 = 0
-	gatherBufferSize           uint32 = 0
-	gatherOutputColor          string = ""
-	gatherDistinguishByPointer bool   = false
-	captureMaxSize             uint32 = 256
-)
-
 // 请求参数结构体
 type CommandRequest struct {
     Buffermod         string `json:"Buffermod"`         // 包类型 (skb, mbuf, raw)
@@ -99,12 +78,14 @@ func commOption(c *CommandRequest) *dump.Option {
 	return opt
 }
 
+// runDump 函数执行给定的 dump.Operator 操作
 func runDump(dumpOp dump.Operator) {
-
-	err := dumpOp.Run(context.TODO())
-	if err != nil {
-		log.Fatalf("Dump operator run err: %v", err)
-	}
+    // 调用 dumpOperator 的 Run 方法，使用一个背景上下文
+    err := dumpOp.Run(context.TODO())
+    if err != nil {
+        // 如果发生错误，则记录错误并终止程序
+        log.Fatalf("Dump operator run err: %v", err)
+    }
 }
 
 func doSkbDumap(c *CommandRequest){

@@ -1,234 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Command Input</title>
+    <title>Command Request JSON 生成器</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            line-height: 1.6;
             display: flex;
-            justify-content: center;
-            padding: 20px;
-            background-color: #f4f4f9;
+            flex-direction: column;
+            align-items: center;
         }
-        .container {
-            max-width: 600px;
-            width: 100%;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
+        h1, h2, h3 {
+            color: #1e1f1f;
             text-align: center;
         }
-        label {
-            font-weight: bold;
-            color: #555;
+        form {
+            width: 100%;
+            max-width: 600px; /* 限制表单最大宽度 */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(120, 152, 195, 0.1);
         }
-        input[type="text"], input[type="number"], select {
-            width: calc(100% - 20px);
-            padding: 8px;
-            margin: 8px 0 16px 0;
-            border: 1px solid #ddd;
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left; /* 标签左对齐 */
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px; /* 增加内边距 */
+            margin-bottom: 15px; /* 增加底部间距 */
+            border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box;
+            box-sizing: border-box; /* 包含内边距和边框在内 */
+            text-align: left; /* 输入框内容左对齐 */
         }
         input[type="checkbox"] {
-            margin-right: 10px;
+            margin: 5px 0 10px;
         }
         button {
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50;
-            color: #fff;
+            background-color: #28a745;
+            color: white;
             border: none;
             border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
+            font-size: 16px; /* 增加按钮字体大小 */
         }
         button:hover {
-            background-color: #45a049;
+            background-color: #218838;
         }
-        .section {
-            padding: 10px 0;
-            border-top: 1px solid #eee;
-        }
-        #response {
-            color: #333;
-            margin-top: 20px;
-            text-align: center;
-        }
-        .section h3 {
-            color: #444;
-            margin-top: 0;
+        .hidden {
+            display: none;
         }
     </style>
-    <script>
-        function updateForm() {
-            const packetType = document.getElementById("buffermod").value;
-            document.getElementById("skb-params").style.display = packetType === "skb" ? "block" : "none";
-            document.getElementById("mbuf-params").style.display = packetType === "mbuf" ? "block" : "none";
-            document.getElementById("raw-params").style.display = packetType === "raw" ? "block" : "none";
+</head>
+<body>
+    <h1>输入命令参数</h1>
+    
+    <form id="commandForm">
+        <label for="buffermod">包类型:</label>
+        <select id="buffermod" name="buffermod" onchange="updateFields()">
+            <option value="">选择包类型</option>
+            <option value="skb">skb</option>
+            <option value="mbuf">mbuf</option>
+            <option value="raw">raw</option>
+        </select>
 
-            // 显示或隐藏 gather 特定字段
-            const gatherChecked = document.getElementById("gather").checked;
-            document.getElementById("gather-params").style.display = gatherChecked ? "block" : "none";
+        <label for="filter">过滤器:</label>
+        <input type="text" id="filter" name="filter">
+
+        <label for="expression">数据包过滤表达式:</label>
+        <input type="text" id="expression" name="expression">
+
+        <label for="tcpdump_options">tcpdump 选项:</label>
+        <input type="text" id="tcpdump_options" name="tcpdump_options">
+
+        <label for="write_file">输出文件名:</label>
+        <input type="text" id="write_file" name="write_file">
+
+        <label for="write_file_rotate">循环覆盖写的方式:</label>
+        <input type="number" id="write_file_rotate" name="write_file_rotate" value="0">
+
+        <label for="capture_count">捕获包数量:</label>
+        <input type="number" id="capture_count" name="capture_count" value="0">
+
+        <label for="capture_max_size">捕获包的最大大小:</label>
+        <input type="number" id="capture_max_size" name="capture_max_size" value="0">
+
+        <label for="user_filter">用户自定义过滤文件:</label>
+        <input type="text" id="user_filter" name="user_filter">
+
+        <label for="user_action">用户自定义动作文件:</label>
+        <input type="text" id="user_action" name="user_action">
+
+        <label for="dry_run">仅生成代码:</label>
+        <input type="checkbox" id="dry_run" name="dry_run">
+
+        <div id="skbOptions" class="hidden">
+            <h3>skb 模式特有选项</h3>
+            <label for="interface">网络接口:</label>
+            <input type="text" id="interface" name="interface">
+
+            <label for="fake_hdr">伪造 header:</label>
+            <input type="checkbox" id="fake_hdr" name="fake_hdr">
+
+            <label for="skb_data">使用 skb 数据:</label>
+            <input type="checkbox" id="skb_data" name="skb_data">
+
+            <label for="skb_data_offset">skb 数据偏移量:</label>
+            <input type="number" id="skb_data_offset" name="skb_data_offset">
+
+            <label for="stack_dump">开启堆栈转储:</label>
+            <input type="checkbox" id="stack_dump" name="stack_dump">
+        </div>
+
+        <div id="mbufRawOptions" class="hidden">
+            <h3>mbuf/raw 模式特有选项</h3>
+            <label for="pid">DPDK 程序的 PID:</label>
+            <input type="number" id="pid" name="pid">
+        </div>
+
+        <button type="button" onclick="generateJson()">start</button>
+    </form>
+
+    <script>
+        function updateFields() {
+            const buffermod = document.getElementById('buffermod').value;
+            const skbOptions = document.getElementById('skbOptions');
+            const mbufRawOptions = document.getElementById('mbufRawOptions');
+
+            skbOptions.classList.add('hidden');
+            mbufRawOptions.classList.add('hidden');
+
+            if (buffermod === 'skb') {
+                skbOptions.classList.remove('hidden');
+            } else if (buffermod === 'mbuf' || buffermod === 'raw') {
+                mbufRawOptions.classList.remove('hidden');
+            }
         }
 
-        function sendCommand() {
-            const gatherChecked = document.getElementById("gather").checked;
-            const gatherTimeoutSec = parseInt(document.getElementById("gatherTimeoutSec").value);
-            const gatherBufferSize = parseInt(document.getElementById("gatherBufferSize").value);
+        function generateJson() {
+            const buffermod = document.getElementById('buffermod').value;
 
-            // 当勾选了 gather 时检查两个字段是否填写
-            if (gatherChecked && (isNaN(gatherTimeoutSec) || isNaN(gatherBufferSize) || gatherTimeoutSec <= 0 || gatherBufferSize <= 0)) {
-                alert("请填写有效的 Gather Timeout Sec 和 Gather Buffer Size");
+            // 检查是否选择了包类型
+            if (!buffermod) {
+                alert('请先选择抓包类型!');
                 return;
             }
 
-            const requestBody = {
-                Buffermod: document.getElementById("buffermod").value,
-                filter: document.getElementById("filter").value,
-                expression: document.getElementById("expression").value,
-                tcpdump_options: document.getElementById("tcpdump_flags").value,
-                write_file: document.getElementById("write_file").value,
-                capture_count: parseInt(document.getElementById("capture_count").value) || 0,
-                capture_max_size: parseInt(document.getElementById("capture_max_size").value) || 0,
-                gather: gatherChecked,
-                user_filter: document.getElementById("user_filter").value,
-                user_action: document.getElementById("user_action").value,
-                dry_run: document.getElementById("dry_run").checked
-            };
+            const form = document.getElementById('commandForm');
+            const formData = new FormData(form);
+            const json = {};
 
-            // 如果勾选了 gather，添加对应的字段
-            if (gatherChecked) {
-                requestBody.gatherTimeoutSec = gatherTimeoutSec;
-                requestBody.gatherBufferSize = gatherBufferSize;
-            }
-
-            if (requestBody.Buffermod === "skb") {
-                requestBody.interface = document.getElementById("interface").value;
-                requestBody.fake_hdr = document.getElementById("fake_hdr").checked;
-                requestBody.skb_data = document.getElementById("skb_data").checked;
-                requestBody.skb_data_offset = parseInt(document.getElementById("skb_data_offset").value) || 0;
-                requestBody.stack_dump = document.getElementById("stack_dump").checked;
-                requestBody.stack_dump_color = document.getElementById("stack_dump_color").value;
-            }
-
-            if (requestBody.Buffermod === "mbuf" || requestBody.Buffermod === "raw") {
-                requestBody.pid = parseInt(document.getElementById("pid").value) || null;
-            }
-
-            fetch("/SkbHandler", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(requestBody)
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("response").innerText = `Response: ${data.result}`;
-            })
-            .catch(error => {
-                console.error("Error:", error);
+            formData.forEach((value, key) => {
+                json[key] = value;
             });
+
+            // 去掉JSON请求的展示
+            // document.getElementById('jsonOutput').textContent = JSON.stringify(json, null, 4);
         }
     </script>
-</head>
-<body>
-
-<div class="container">
-    <h1>Command Input</h1>
-    <label for="buffermod">Packet Type:</label>
-    <select id="buffermod" onchange="updateForm()">
-        <option value="skb">skb</option>
-        <option value="mbuf">mbuf</option>
-        <option value="raw">raw</option>
-    </select>
-
-    <div class="section">
-        <label for="filter">Filter (-f):</label>
-        <input type="text" id="filter" placeholder="Enter function trace filter">
-
-        <label for="expression">Expression (-e):</label>
-        <input type="text" id="expression" placeholder="Enter expression">
-
-        <label for="tcpdump_flags">Tcpdump Options (-t):</label>
-        <input type="text" id="tcpdump_flags" placeholder="Enter tcpdump flags">
-
-        <label for="write_file">Write File (-w):</label>
-        <input type="text" id="write_file" placeholder="Enter file name">
-
-        <label for="capture_count">Capture Count (-c):</label>
-        <input type="number" id="capture_count" placeholder="Enter capture count">
-
-        <label for="capture_max_size">Capture Max Size (--capture-max-size):</label>
-        <input type="number" id="capture_max_size" placeholder="Enter max capture size">
-
-        <label for="gather">Gather (--gather):</label>
-        <input type="checkbox" id="gather" onclick="updateForm()">
-
-        <label for="user_filter">User Filter (--user-filter):</label>
-        <input type="text" id="user_filter" placeholder="Enter user filter filename">
-
-        <label for="user_action">User Action (--user-action):</label>
-        <input type="text" id="user_action" placeholder="Enter user action filename">
-
-        <label for="dry_run">Dry Run (--dry-run):</label>
-        <input type="checkbox" id="dry_run">
-    </div>
-
-    <div id="gather-params" class="section" style="display:none;">
-        <h3>Gather Parameters</h3>
-        <label for="gatherTimeoutSec">Gather Timeout Sec:</label>
-        <input type="number" id="gatherTimeoutSec" placeholder="Enter gather timeout in seconds">
-
-        <label for="gatherBufferSize">Gather Buffer Size:</label>
-        <input type="number" id="gatherBufferSize" placeholder="Enter gather buffer size in bytes">
-    </div>
-
-    <div id="skb-params" class="section" style="display:none;">
-        <h3>SKB Specific Parameters</h3>
-        <label for="interface">Interface (-i):</label>
-        <input type="text" id="interface" placeholder="Enter interface">
-
-        <label for="fake_hdr">Fake Header (--fake-hdr):</label>
-        <input type="checkbox" id="fake_hdr">
-
-        <label for="skb_data">SKB Data (--skb-data):</label>
-        <input type="checkbox" id="skb_data">
-
-        <label for="skb_data_offset">SKB Data Offset (--skb-data-offset):</label>
-        <input type="number" id="skb_data_offset" placeholder="Enter skb data offset">
-
-        <label for="stack_dump">Stack Dump (-S):</label>
-        <input type="checkbox" id="stack_dump">
-
-        <label for="stack_dump_color">Stack Dump Color (--stack-dump-color):</label>
-        <select id="stack_dump_color">
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="blue">Blue</option>
-            <option value="purple">Purple</option>
-            <option value="cyan">Cyan</option>
-        </select>
-    </div>
-
-    <div id="mbuf-params" class="section" style="display:none;">
-        <h3>MBUF/RAW Specific Parameters</h3>
-        <label for="pid">PID (-p):</label>
-        <input type="number" id="pid" placeholder="Enter DPDK program PID">
-    </div>
-
-    <button onclick="sendCommand()">Start</button>
-
-    <p id="response"></p>
-</div>
-
 </body>
 </html>
