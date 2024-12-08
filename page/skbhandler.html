@@ -1,165 +1,242 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Command Request JSON 生成器</title>
+    <title>POST 请求示例 - 魔法粒子效果</title>
     <style>
-        /* 样式保持不变 */
-        .hidden { display: none; }
+        body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background: #0e0e0e;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: visible; /* 改为 visible，允许内容溢出 */
+        width: 60%; /* 将宽度设置为120% */
+        margin-left: 15%; /* 居中调整，使其仍然在屏幕中央 */
+    }
+
+        .magic-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(circle, rgba(255, 0, 127, 0.3) 0%, rgba(0, 0, 0, 0) 60%);
+            opacity: 0.7;
+            animation: glowEffect 1.5s ease-out infinite;
+        }
+
+        @keyframes glowEffect {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+        }
+
+        .particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 200%; /* 设置宽度为80% */
+        }
+
+        .form-container h1 {
+            margin-bottom: 20px;
+            color: #ff007f;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-container input, .form-container button {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="checkbox"] {
+            border: 1px solid #ccc;
+        }
+
+        .form-container button {
+            background: #ff007f;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-container button:hover {
+            background: #ff8300;
+        }
+
+        .form-container button:active {
+            background: #7f00ff;
+        }
     </style>
 </head>
 <body>
-    <h1>输入命令参数</h1>
-    
-    <form id="commandForm">
-        <!-- 包类型选择 -->
-        <label for="buffermod">包类型:</label>
-        <select id="buffermod" name="buffermod" onchange="updateFields()">
-            <option value="">选择包类型</option>
-            <option value="skb">skb</option>
-            <option value="mbuf">mbuf</option>
-            <option value="raw">raw</option>
-        </select>
-        <br>
+    <!-- Magic Glow -->
+    <div class="magic-glow"></div>
 
-        <!-- 过滤器 -->
-        <label for="filter">过滤器:</label>
-        <input type="text" id="filter" name="filter">
-        <br>
+    <!-- Particles.js container -->
+    <div id="particles-js" class="particles-js"></div>
 
-        <!-- 数据包过滤表达式 -->
-        <label for="expression">数据包过滤表达式:</label>
-        <input type="text" id="expression" name="expression">
-        <br>
+    <!-- Form container -->
+    <div class="form-container">
+        <h1>start</h1>
+        <form id="commandForm">
+            <label for="bufferMod">BufferMod:</label>
+            <input type="text" id="bufferMod" name="Buffermod" value="skb">
 
-        <!-- tcpdump 选项 -->
-        <label for="tcpdump_options">tcpdump 选项:</label>
-        <input type="text" id="tcpdump_options" name="tcpdump_options">
-        <br>
+            <label for="filter">Filter:</label>
+            <input type="text" id="filter" name="Filter" value="trace_function">
 
-        <!-- 输出文件名 -->
-        <label for="write_file">输出文件名:</label>
-        <input type="text" id="write_file" name="write_file">
-        <br>
+            <label for="expression">Expression:</label>
+            <input type="text" id="expression" name="Expression" value="tcp port 80">
 
-        <!-- 循环覆盖写的方式 -->
-        <label for="write_file_rotate">循环覆盖写的方式:</label>
-        <input type="number" id="write_file_rotate" name="write_file_rotate" value="0">
-        <br>
+            <label for="tcpdumpOptions">Tcpdump Options:</label>
+            <input type="text" id="tcpdumpOptions" name="TcpdumpOpts" value="-nn">
 
-        <!-- 捕获包数量 -->
-        <label for="capture_count">捕获包数量:</label>
-        <input type="number" id="capture_count" name="capture_count" value="0">
-        <br>
+            <label for="writeFile">Write File:</label>
+            <input type="text" id="writeFile" name="WriteFile" value="output.pcap">
 
-        <!-- 捕获包的最大大小 -->
-        <label for="capture_max_size">捕获包的最大大小:</label>
-        <input type="number" id="capture_max_size" name="capture_max_size" value="0">
-        <br>
+            <label for="writeFileRotate">Write File Rotate:</label>
+            <input type="number" id="writeFileRotate" name="WriteFileRotate" value="3">
 
-        <!-- 用户自定义过滤文件 -->
-        <label for="user_filter">用户自定义过滤文件:</label>
-        <input type="text" id="user_filter" name="user_filter">
-        <br>
+            <label for="captureCount">Capture Count:</label>
+            <input type="number" id="captureCount" name="CaptureCount" value="1000">
 
-        <!-- 用户自定义动作文件 -->
-        <label for="user_action">用户自定义动作文件:</label>
-        <input type="text" id="user_action" name="user_action">
-        <br>
+            <label for="captureMaxSize">Capture Max Size:</label>
+            <input type="number" id="captureMaxSize" name="CaptureMaxSize" value="1048576">
 
-        <!-- 仅生成代码 -->
-        <label for="dry_run">仅生成代码:</label>
-        <input type="checkbox" id="dry_run" name="dry_run">
-        <br>
+            <label for="userFilter">User Filter:</label>
+            <input type="text" id="userFilter" name="UserFilter" value="filter.txt">
 
-        <!-- skb 模式特有选项 -->
-        <div id="skbOptions" class="hidden">
-            <h3>skb 模式特有选项</h3>
-            <label for="interface">网络接口:</label>
-            <input type="text" id="interface" name="interface">
-            <br>
+            <label for="userAction">User Action:</label>
+            <input type="text" id="userAction" name="UserAction" value="action.txt">
 
-            <label for="fake_hdr">伪造 header:</label>
-            <input type="checkbox" id="fake_hdr" name="fake_hdr">
-            <br>
+            <label for="dryRun">Dry Run:</label>
+            <input type="checkbox" id="dryRun" name="DryRun" checked>
 
-            <label for="skb_data">使用 skb 数据:</label>
-            <input type="checkbox" id="skb_data" name="skb_data">
-            <br>
+            <button type="button" id="sendRequest">发送请求</button>
+        </form>
+    </div>
 
-            <label for="skb_data_offset">skb 数据偏移量:</label>
-            <input type="number" id="skb_data_offset" name="skb_data_offset">
-            <br>
-
-            <label for="stack_dump">开启堆栈转储:</label>
-            <input type="checkbox" id="stack_dump" name="stack_dump">
-            <br>
-        </div>
-
-        <!-- mbuf/raw 模式特有选项 -->
-        <div id="mbufRawOptions" class="hidden">
-            <h3>mbuf/raw 模式特有选项</h3>
-            <label for="pid">DPDK 程序的 PID:</label>
-            <input type="number" id="pid" name="pid">
-            <br>
-        </div>
-
-        <button type="button" onclick="generateJson()">提交请求</button>
-    </form>
-
+    <!-- Particles.js script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        function updateFields() {
-            const buffermod = document.getElementById('buffermod').value;
-            const skbOptions = document.getElementById('skbOptions');
-            const mbufRawOptions = document.getElementById('mbufRawOptions');
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                }
+            },
+            "retina_detect": true
+        });
 
-            // 隐藏所有特定包类型的选项
-            skbOptions.classList.add('hidden');
-            mbufRawOptions.classList.add('hidden');
-
-            // 根据包类型显示对应的选项
-            if (buffermod === 'skb') {
-                skbOptions.classList.remove('hidden');
-            } else if (buffermod === 'mbuf' || buffermod === 'raw') {
-                mbufRawOptions.classList.remove('hidden');
-            }
-        }
-
-        function generateJson() {
-            const buffermod = document.getElementById('buffermod').value;
-
-            // 检查是否选择了包类型
-            if (!buffermod) {
-                alert('请先选择包类型!');
-                return;
-            }
-
-            const form = document.getElementById('commandForm');
-            const formData = new FormData(form);
-            const json = {};
+        document.getElementById('sendRequest').addEventListener('click', function () {
+            const formData = new FormData(document.getElementById('commandForm'));
+            const requestData = {};
 
             formData.forEach((value, key) => {
-                json[key] = value;
+                if (key === "DryRun") {
+                    requestData[key] = value === "on";
+                } else if (!isNaN(value) && value !== "") {
+                    requestData[key] = Number(value);
+                } else {
+                    requestData[key] = value;
+                }
             });
 
-            // 使用 fetch API 发起 POST 请求
-            fetch('/SkbHandler', { // 后端 API 地址
+            fetch('/SkbHandler', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(json),
+                body: JSON.stringify(requestData)
             })
-            .then(response => response.json())
-            .then(data => {
-                console.log('请求成功:', data);
-                // 可以根据需要处理返回的数据
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url; // 跳转到重定向目标
+                }
             })
-            .catch((error) => {
-                console.error('请求失败:', error);
-            });
-        }
+        
+        });
     </script>
 </body>
 </html>

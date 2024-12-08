@@ -24,15 +24,16 @@ type CommandRequest struct {
     UserFilter        string `json:"user_filter"`       // --user-filter 参数，用户自定义 filter 文件
     UserAction        string `json:"user_action"`       // --user-action 参数，用户自定义 action 文件
     DryRun            bool   `json:"dry_run"`           // --dry-run 参数，是否只生成代码而不执行
-
-    // skb 模式特有的参数
-    Interface         string `json:"interface,omitempty"`         // -i 参数，网络接口
-    IsSkbFakeHdr      bool   `json:"fake_hdr,omitempty"`          // --fake-hdr 参数，伪造 header
-    IsUseSkbData      bool   `json:"skb_data,omitempty"`          // --skb-data 参数，使用 skb 数据
-    UseSkbDataOffset  int32    `json:"skb_data_offset,omitempty"`   // --skb-data-offset 参数，skb 数据偏移量
-    IsDumpStack       bool   `json:"stack_dump,omitempty"`        // -S 参数，是否开启堆栈转储
-    // mbuf/raw 模式特有的参数
-    Pid               int    `json:"pid,omitempty"`               // -p 参数，DPDK 程序的 PID
+}
+//向前端返回的josn格式
+type TCPHeader struct {
+	SourcePort      int    `json:"source_port"`
+	DestinationPort int    `json:"destination_port"`
+	SequenceNumber  int    `json:"sequence_number"`
+	AckNumber       int    `json:"ack_number"`
+	DataOffset      int    `json:"data_offset"`
+	Flags           string `json:"flags"`
+	WindowSize      int    `json:"window_size"`
 }
 
 func Execute(c *gin.Context) {
@@ -44,8 +45,9 @@ func Execute(c *gin.Context) {
 		return
     }
 	if cmdRequest.Buffermod == "skb" {//skb包
-		doSkbDumap(&cmdRequest)
-		c.JSON(http.StatusOK, gin.H{"result": "skb get"})
+		go doSkbDumap(&cmdRequest)
+        c.Redirect(http.StatusFound, "/tcp_headers")
+		//c.JSON(http.StatusOK, gin.H{"result": "skb get"})
 		return
 	}else if cmdRequest.Buffermod == "raw"{//raw包
 		//doRawDumap(&cmdRequest)

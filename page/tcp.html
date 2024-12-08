@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP Headers Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Captured TCP Headers</h1>
+    <table id="tcp-table">
+        <thead>
+            <tr>
+                <th>Source Port</th>
+                <th>Destination Port</th>
+                <th>Sequence Number</th>
+                <th>Acknowledgment Number</th>
+                <th>Data Offset</th>
+                <th>Flags</th>
+                <th>Window Size</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        async function loadTCPHeaders() {
+            const response = await fetch('/tcp_headers');
+            const data = await response.json();
+            const tbody = document.querySelector('#tcp-table tbody');
+            tbody.innerHTML = '';
+
+            data.forEach(header => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${header.source_port}</td>
+                    <td>${header.destination_port}</td>
+                    <td>${header.sequence_number}</td>
+                    <td>${header.ack_number}</td>
+                    <td>${header.data_offset}</td>
+                    <td>${header.flags}</td>
+                    <td>${header.window_size}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        loadTCPHeaders();
+    </script>
+</body>
+</html>

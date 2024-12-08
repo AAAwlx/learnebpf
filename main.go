@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 	"skb/cmd"
-
+	//"fmt"
 	"github.com/gin-gonic/gin"
 )
 
@@ -30,6 +30,11 @@ func main() {
 
 	router.POST("/SkbHandler", skbstart)//处理参数请求ebpf
 	
+	router.GET("/tcp_headers", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "tcp.html", nil)
+	})
+
+
 	router.Run(":8000")
 }
 
@@ -41,5 +46,10 @@ func loginEndpoint(c *gin.Context){
 
 //进入到参数解析模块
 func skbstart (c *gin.Context){
+	//c.Redirect(http.StatusFound, "/tcp_headers")
 	cmd.Execute(c)
+}
+
+func fileread(){
+
 }

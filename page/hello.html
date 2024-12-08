@@ -3,84 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Text with Background Image</title>
+    <title>SkbHandler Login - Magic Effect</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
-            position: relative;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1e1e1e;
+            overflow: hidden;
         }
 
-        /* Fullscreen background image */
-        .background-image {
+        /* Container for the login box */
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .login-container h1 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+            animation: bounce 1s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            font-size: 1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-container input[type="text"]:focus, 
+        .login-container input[type="password"]:focus {
+            border-color: #ff007f;
+            box-shadow: 0 0 8px rgba(255, 0, 127, 0.7);
+            transform: scale(1.05);
+        }
+
+        .login-container input[type="text"]:focus::after,
+        .login-container input[type="password"]:focus::after {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('./static/1.jpg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            z-index: 1; /* Layer behind text */
-        }
-
-        /* Center the content (text and form) */
-        .center-content {
-            position: relative;
-            z-index: 2; /* Layer above the background image */
-            display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full screen height */
-            color: white;
-            text-align: center;
-        }
-
-        /* Center the "Hello Netcap" text */
-        .center-content h1 {
-            font-size: 6em;
-            font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow for better contrast */
-        }
-
-        /* Style the form */
-        .center-content form {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .center-content input {
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 1em;
+            border: 2px solid #ff007f;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            animation: glowing 1.5s infinite alternate;
         }
 
-        .center-content input[type="submit"] {
-            background-color: #28a745;
+        /* Glowing effect for the input fields */
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 15px #ff007f;
+            }
+            50% {
+                box-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f;
+            }
+            100% {
+                box-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 15px #ff007f;
+            }
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #ff007f;
             color: white;
             cursor: pointer;
+            font-size: 1.1em;
+            padding: 12px 20px;
+            border-radius: 5px;
             border: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .center-content input[type="submit"]:hover {
-            background-color: #218838;
+        .login-container input[type="submit"]:hover {
+            background-color: #ff8300;
+            transform: scale(1.05);
+        }
+
+        .login-container input[type="submit"]:active {
+            background-color: #7f00ff;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container label {
+            color: #fff;
+            margin-bottom: 5px;
+            text-align: left;
+            font-size: 1em;
+        }
+
+        /* Optional background image */
+        .particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Magic glow */
+        .magic-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(circle, rgba(255, 0, 127, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
+            opacity: 0.5;
+            animation: glowEffect 1.5s ease-out infinite;
+        }
+
+        @keyframes glowEffect {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Background image div -->
-    <div class="background-image"></div>
+    <!-- Magic Glow -->
+    <div class="magic-glow"></div>
 
-    <!-- Centered content (text and form) -->
-    <div class="center-content">
-        <!-- Centered text -->
-        <h1>Hello SkbHandler</h1>
+    <!-- Particles.js container -->
+    <div id="particles-js" class="particles-js"></div>
+
+    <!-- Login container -->
+    <div class="login-container">
+        <h1>Welcome to SkbHandler</h1>
 
         <!-- Login form -->
         <form action="http://localhost:8000/" method="POST">
@@ -88,8 +180,91 @@
             <input type="text" id="username" name="username" required><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Login">
         </form>
     </div>
+
+    <!-- Particles.js script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 10,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
