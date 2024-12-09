@@ -38,7 +38,7 @@ func parseTCPHeader(line string) *TCPHeader {
 }
 
 func loadTCPHeaders(filename string) ([]TCPHeader, error) {
-	file, err := os.Open(filename)
+	file, err := os.Open("/home/ylx/我的项目/skb/skb.txt")
 	if err != nil {
 		return nil, err
 	}

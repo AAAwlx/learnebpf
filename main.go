@@ -1,11 +1,24 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"skb/cmd"
+
 	//"fmt"
 	"github.com/gin-gonic/gin"
 )
+
+type TCPHeadera struct {
+	SourcePort          int    `json:"source_port"`
+	DestinationPort     int    `json:"destination_port"`
+	SequenceNumber      uint32 `json:"sequence_number"`
+	AcknowledgmentNumber uint32 `json:"ack_number"`
+	DataOffset          int    `json:"data_offset"`
+	Flags               string `json:"flags"`
+	WindowSize          int    `json:"window_size"`
+}
+
 
 func main() {
 	router := gin.Default()
@@ -31,7 +44,9 @@ func main() {
 	router.POST("/SkbHandler", skbstart)//处理参数请求ebpf
 	
 	router.GET("/tcp_headers", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "tcp.html", nil)
+		handler(c)
+		//c.JSON(http.StatusOK, gin.H{"result": "raw get"})
+		//c.HTML(http.StatusOK, "tcp.html", nil)
 	})
 
 
@@ -50,6 +65,16 @@ func skbstart (c *gin.Context){
 	cmd.Execute(c)
 }
 
-func fileread(){
-
+func handler(c *gin.Context) {
+	headers, err := cmd.LoadTCPHeaders("tcp_data.txt")
+    if err != nil {
+        c.JSON(http.StatusInternalServerError, gin.H{
+            "error": err.Error(),
+        })
+        return
+    }
+    // 设置响应为 JSON
+	c.Header("Content-Type", "application/json")
+	fmt.Print(headers);
+    c.JSON(http.StatusOK, headers)
 }

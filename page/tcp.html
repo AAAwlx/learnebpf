@@ -3,27 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCP Headers Table</title>
+    <title>TCP Header Info</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px 0;
+            background-color: #4CAF50;
+            color: white;
+            margin: 0;
+        }
+
         table {
-            width: 100%;
+            width: 80%;
+            margin: 20px auto;
             border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
+
         th, td {
-            padding: 10px;
+            padding: 12px 15px;
             text-align: left;
+            border: 1px solid #ddd;
         }
+
         th {
-            background-color: #f4f4f4;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        td {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                width: 90%;
+            }
+
+            th, td {
+                padding: 8px 10px;
+            }
         }
     </style>
+    <script>
+        async function fetchTCPHeaders() {
+            try {
+                const response = await fetch('http://localhost:8000/tcp_headers');
+                const data = await response.json();
+
+                console.log(data);
+
+                const table = document.getElementById('tcp-header-table');
+                data.forEach(header => {
+                    const row = table.insertRow();
+                    row.insertCell(0).innerText = header.source_port;
+                    row.insertCell(1).innerText = header.destination_port;
+                    row.insertCell(2).innerText = header.sequence_number;
+                    row.insertCell(3).innerText = header.ack_number;
+                    row.insertCell(4).innerText = header.data_offset;
+                    row.insertCell(5).innerText = header.flags;
+                    row.insertCell(6).innerText = header.window_size;
+                });
+            } catch (error) {
+                console.error('Error fetching TCP headers:', error);
+            }
+        }
+
+        window.onload = fetchTCPHeaders;
+    </script>
 </head>
 <body>
-    <h1>Captured TCP Headers</h1>
-    <table id="tcp-table">
+    <h1>TCP Header Information</h1>
+    <table id="tcp-header-table">
         <thead>
             <tr>
                 <th>Source Port</th>
@@ -35,31 +103,9 @@
                 <th>Window Size</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            <!-- Data will be populated here by JavaScript -->
+        </tbody>
     </table>
-    <script>
-        async function loadTCPHeaders() {
-            const response = await fetch('/tcp_headers');
-            const data = await response.json();
-            const tbody = document.querySelector('#tcp-table tbody');
-            tbody.innerHTML = '';
-
-            data.forEach(header => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${header.source_port}</td>
-                    <td>${header.destination_port}</td>
-                    <td>${header.sequence_number}</td>
-                    <td>${header.ack_number}</td>
-                    <td>${header.data_offset}</td>
-                    <td>${header.flags}</td>
-                    <td>${header.window_size}</td>
-                `;
-                tbody.appendChild(row);
-            });
-        }
-
-        loadTCPHeaders();
-    </script>
 </body>
 </html>

@@ -2,600 +2,799 @@ Successfully attached XDP program to interface wlan0
 Start polling ring buffer
 Captured TCP Header:
   Source Port: 36676
-  Destination Port: 33636
-  Sequence Number: 130710294
-  Acknowledgment Number: 1983554958
-  Data Offset: 8
-  Flags: 0x12
-  Window Size: 43200
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 33636
-  Sequence Number: 130710295
-  Acknowledgment Number: 1983555849
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 33636
-  Sequence Number: 130710865
-  Acknowledgment Number: 1983555932
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 57384
-  Sequence Number: 22882048
-  Acknowledgment Number: 414049866
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 16
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005678
-  Acknowledgment Number: 3600881072
-  Data Offset: 11
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005678
-  Acknowledgment Number: 3600883256
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 91
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005678
-  Acknowledgment Number: 3600883256
-  Data Offset: 8
-  Flags: 0x18
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005754
-  Acknowledgment Number: 3600883256
-  Data Offset: 8
-  Flags: 0x18
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005891
-  Acknowledgment Number: 3600883316
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 44748
-  Sequence Number: 2602643317
-  Acknowledgment Number: 3444721399
-  Data Offset: 8
-  Flags: 0x12
-  Window Size: 43200
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 44748
-  Sequence Number: 2602643318
-  Acknowledgment Number: 3444721828
-  Data Offset: 5
-  Flags: 0x10
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 44748
-  Sequence Number: 2602644730
-  Acknowledgment Number: 3444721828
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 44748
-  Sequence Number: 2602646142
-  Acknowledgment Number: 3444721828
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 44748
-  Sequence Number: 2602646238
-  Acknowledgment Number: 3444721828
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 44748
-  Sequence Number: 2602647505
-  Acknowledgment Number: 3444722150
+  Destination Port: 35160
+  Sequence Number: 1220504387
+  Acknowledgment Number: 2625258083
   Data Offset: 5
   Flags: 0x18
   Window Size: 21
 
 Captured TCP Header:
   Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005891
-  Acknowledgment Number: 3600883495
+  Destination Port: 46810
+  Sequence Number: 682595839
+  Acknowledgment Number: 3500375066
   Data Offset: 8
   Flags: 0x10
-  Window Size: 92
+  Window Size: 301
 
 Captured TCP Header:
   Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005891
-  Acknowledgment Number: 3600884895
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005891
-  Acknowledgment Number: 3600886295
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005891
-  Acknowledgment Number: 3600887350
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219005891
-  Acknowledgment Number: 3600887350
-  Data Offset: 8
-  Flags: 0x18
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006030
-  Acknowledgment Number: 3600887425
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44678
-  Sequence Number: 884128531
-  Acknowledgment Number: 103861224
-  Data Offset: 8
-  Flags: 0x12
-  Window Size: 43200
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44678
-  Sequence Number: 884128532
-  Acknowledgment Number: 103861654
-  Data Offset: 5
-  Flags: 0x10
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44678
-  Sequence Number: 884129944
-  Acknowledgment Number: 103861654
+  Destination Port: 46810
+  Sequence Number: 682595839
+  Acknowledgment Number: 3500377190
   Data Offset: 5
   Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44678
-  Sequence Number: 884129992
-  Acknowledgment Number: 103861654
-  Data Offset: 5
-  Flags: 0x10
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44678
-  Sequence Number: 884131404
-  Acknowledgment Number: 103861654
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44678
-  Sequence Number: 884132746
-  Acknowledgment Number: 103861950
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 57384
-  Sequence Number: 22882048
-  Acknowledgment Number: 414049866
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 16
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006030
-  Acknowledgment Number: 3600887619
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006030
-  Acknowledgment Number: 3600889560
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006030
-  Acknowledgment Number: 3600889560
-  Data Offset: 8
-  Flags: 0x18
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006149
-  Acknowledgment Number: 3600889672
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44692
-  Sequence Number: 826165385
-  Acknowledgment Number: 3857252213
-  Data Offset: 8
-  Flags: 0x12
-  Window Size: 43200
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44692
-  Sequence Number: 826165386
-  Acknowledgment Number: 3857252966
-  Data Offset: 5
-  Flags: 0x10
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44692
-  Sequence Number: 826166798
-  Acknowledgment Number: 3857252966
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44692
-  Sequence Number: 826169622
-  Acknowledgment Number: 3857252966
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 36676
-  Destination Port: 44692
-  Sequence Number: 826168210
-  Acknowledgment Number: 3857252966
-  Data Offset: 5
-  Flags: 0x10
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 50452
-  Sequence Number: 3391316590
-  Acknowledgment Number: 3902681898
-  Data Offset: 8
-  Flags: 0x12
-  Window Size: 43200
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 50452
-  Sequence Number: 3391316591
-  Acknowledgment Number: 3902682349
-  Data Offset: 5
-  Flags: 0x10
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 50452
-  Sequence Number: 3391319415
-  Acknowledgment Number: 3902682349
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 50452
-  Sequence Number: 3391318003
-  Acknowledgment Number: 3902682349
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 50452
-  Sequence Number: 3391320795
-  Acknowledgment Number: 3902682636
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006149
-  Acknowledgment Number: 3600889672
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006149
-  Acknowledgment Number: 3600889870
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006149
-  Acknowledgment Number: 3600891270
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006149
-  Acknowledgment Number: 3600892473
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006149
-  Acknowledgment Number: 3600892473
-  Data Offset: 8
-  Flags: 0x18
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006229
-  Acknowledgment Number: 3600892473
-  Data Offset: 8
-  Flags: 0x18
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006392
-  Acknowledgment Number: 3600892579
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 92
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006392
-  Acknowledgment Number: 3600894701
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 91
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006392
-  Acknowledgment Number: 3600894701
-  Data Offset: 8
-  Flags: 0x18
-  Window Size: 92
+  Window Size: 302
 
 Captured TCP Header:
   Source Port: 443
-  Destination Port: 55774
-  Sequence Number: 2196067
-  Acknowledgment Number: 3728631538
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 23
+  Destination Port: 57316
+  Sequence Number: 3146612785
+  Acknowledgment Number: 1149541323
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 10
 
 Captured TCP Header:
-  Source Port: 443
-  Destination Port: 57292
-  Sequence Number: 1035275868
-  Acknowledgment Number: 884812992
+  Source Port: 8080
+  Destination Port: 34214
+  Sequence Number: 3389974602
+  Acknowledgment Number: 762386875
   Data Offset: 5
   Flags: 0x18
-  Window Size: 22
-
-Captured TCP Header:
-  Source Port: 443
-  Destination Port: 57292
-  Sequence Number: 1035275907
-  Acknowledgment Number: 884812992
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 22
+  Window Size: 844
 
 Captured TCP Header:
   Source Port: 50001
-  Destination Port: 48418
-  Sequence Number: 2593698136
-  Acknowledgment Number: 1437695893
+  Destination Port: 44748
+  Sequence Number: 4220262790
+  Acknowledgment Number: 3187840215
   Data Offset: 8
   Flags: 0x12
-  Window Size: 43200
+  Window Size: 42340
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682595967
+  Acknowledgment Number: 3500381338
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 308
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596078
+  Acknowledgment Number: 3500381338
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 308
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 44748
+  Sequence Number: 4220264203
+  Acknowledgment Number: 3187840632
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 44748
+  Sequence Number: 4220262791
+  Acknowledgment Number: 3187840632
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 44748
+  Sequence Number: 4220265615
+  Acknowledgment Number: 3187840632
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 44748
+  Sequence Number: 4220265615
+  Acknowledgment Number: 3187840632
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 44748
+  Sequence Number: 4220266974
+  Acknowledgment Number: 3187840951
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 8080
+  Destination Port: 34214
+  Sequence Number: 3389974682
+  Acknowledgment Number: 762386992
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 844
 
 Captured TCP Header:
   Source Port: 443
-  Destination Port: 55774
-  Sequence Number: 2196106
-  Acknowledgment Number: 3728631538
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 23
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 57384
-  Sequence Number: 22882048
-  Acknowledgment Number: 414050067
+  Destination Port: 57316
+  Sequence Number: 3146612785
+  Acknowledgment Number: 1149541323
   Data Offset: 8
   Flags: 0x10
-  Window Size: 16
+  Window Size: 10
 
 Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 57384
-  Sequence Number: 22882048
-  Acknowledgment Number: 414050067
+  Source Port: 36676
+  Destination Port: 42632
+  Sequence Number: 3422433120
+  Acknowledgment Number: 232647932
   Data Offset: 8
-  Flags: 0x18
-  Window Size: 16
+  Flags: 0x12
+  Window Size: 42340
 
 Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 57384
-  Sequence Number: 22882120
-  Acknowledgment Number: 414050067
-  Data Offset: 8
-  Flags: 0x18
-  Window Size: 16
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 57384
-  Sequence Number: 22882462
-  Acknowledgment Number: 414050165
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 16
-
-Captured TCP Header:
-  Source Port: 48752
-  Destination Port: 57384
-  Sequence Number: 22882462
-  Acknowledgment Number: 414050259
-  Data Offset: 8
-  Flags: 0x10
-  Window Size: 16
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 48418
-  Sequence Number: 2593698137
-  Acknowledgment Number: 1437696351
-  Data Offset: 5
-  Flags: 0x10
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 48418
-  Sequence Number: 2593699549
-  Acknowledgment Number: 1437696351
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 48418
-  Sequence Number: 2593700961
-  Acknowledgment Number: 1437696351
-  Data Offset: 5
-  Flags: 0x18
-  Window Size: 21
-
-Captured TCP Header:
-  Source Port: 50001
-  Destination Port: 48418
-  Sequence Number: 2593702364
-  Acknowledgment Number: 1437696692
+  Source Port: 36676
+  Destination Port: 42632
+  Sequence Number: 3422434533
+  Acknowledgment Number: 232648390
   Data Offset: 5
   Flags: 0x18
   Window Size: 21
 
 Captured TCP Header:
   Source Port: 36676
-  Destination Port: 36688
-  Sequence Number: 1350140177
-  Acknowledgment Number: 1607808880
+  Destination Port: 42632
+  Sequence Number: 3422433121
+  Acknowledgment Number: 232648390
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 42632
+  Sequence Number: 3422435945
+  Acknowledgment Number: 232648390
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 42632
+  Sequence Number: 3422437364
+  Acknowledgment Number: 232648630
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 8080
+  Destination Port: 34214
+  Sequence Number: 3389974762
+  Acknowledgment Number: 762387109
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 844
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 56854
+  Sequence Number: 1251620405
+  Acknowledgment Number: 2180556225
+  Data Offset: 8
+  Flags: 0x12
+  Window Size: 42340
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596237
+  Acknowledgment Number: 3500381434
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 309
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596237
+  Acknowledgment Number: 3500381434
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 311
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596237
+  Acknowledgment Number: 3500381574
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 312
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596237
+  Acknowledgment Number: 3500387460
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 316
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596346
+  Acknowledgment Number: 3500387460
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 316
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 57316
+  Sequence Number: 3146612785
+  Acknowledgment Number: 1149541323
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 10
+
+Captured TCP Header:
+  Source Port: 8080
+  Destination Port: 34214
+  Sequence Number: 3389974842
+  Acknowledgment Number: 762387226
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 844
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 46080
+  Sequence Number: 1779634283
+  Acknowledgment Number: 2492662484
+  Data Offset: 8
+  Flags: 0x12
+  Window Size: 64240
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 46080
+  Sequence Number: 1779634284
+  Acknowledgment Number: 2492663001
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 501
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 46080
+  Sequence Number: 1779634425
+  Acknowledgment Number: 2492664321
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 501
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 46080
+  Sequence Number: 1779634646
+  Acknowledgment Number: 2492664321
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 501
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 46080
+  Sequence Number: 1779634646
+  Acknowledgment Number: 2492664353
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 501
+
+Captured TCP Header:
+  Source Port: 8080
+  Destination Port: 34214
+  Sequence Number: 3389974922
+  Acknowledgment Number: 762387343
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 844
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 36404
+  Sequence Number: 80668999
+  Acknowledgment Number: 3690844249
+  Data Offset: 8
+  Flags: 0x12
+  Window Size: 42340
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 57316
+  Sequence Number: 3146612785
+  Acknowledgment Number: 1149541323
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 10
+
+Captured TCP Header:
+  Source Port: 8080
+  Destination Port: 34214
+  Sequence Number: 3389975002
+  Acknowledgment Number: 762387460
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 844
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878638747
+  Acknowledgment Number: 36555362
+  Data Offset: 8
+  Flags: 0x12
+  Window Size: 42340
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878638747
+  Acknowledgment Number: 36555362
+  Data Offset: 8
+  Flags: 0x12
+  Window Size: 42340
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878638748
+  Acknowledgment Number: 36555768
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878640160
+  Acknowledgment Number: 36555768
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878641572
+  Acknowledgment Number: 36555768
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878642984
+  Acknowledgment Number: 36555768
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878643317
+  Acknowledgment Number: 36555952
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878643444
+  Acknowledgment Number: 36556200
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41886
+  Sequence Number: 3110225583
+  Acknowledgment Number: 1735474957
+  Data Offset: 8
+  Flags: 0x12
+  Window Size: 42340
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41886
+  Sequence Number: 3110225584
+  Acknowledgment Number: 1735475418
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41886
+  Sequence Number: 3110226996
+  Acknowledgment Number: 1735475418
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41886
+  Sequence Number: 3110228408
+  Acknowledgment Number: 1735475418
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41886
+  Sequence Number: 3110228408
+  Acknowledgment Number: 1735475418
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41886
+  Sequence Number: 3110229810
+  Acknowledgment Number: 1735475418
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41886
+  Sequence Number: 3110229810
+  Acknowledgment Number: 1735475697
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41872
+  Sequence Number: 878643556
+  Acknowledgment Number: 36556855
   Data Offset: 5
   Flags: 0x18
   Window Size: 21
 
 Captured TCP Header:
   Source Port: 48752
-  Destination Port: 49398
-  Sequence Number: 4219006537
-  Ack
+  Destination Port: 46810
+  Sequence Number: 682596478
+  Acknowledgment Number: 3500387532
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 317
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675704242
+  Acknowledgment Number: 1248652618
+  Data Offset: 8
+  Flags: 0x12
+  Window Size: 42340
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596478
+  Acknowledgment Number: 3500389731
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 317
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596574
+  Acknowledgment Number: 3500389731
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 317
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 42156
+  Sequence Number: 1885298756
+  Acknowledgment Number: 3037873174
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 42182
+  Sequence Number: 2300530477
+  Acknowledgment Number: 2275136711
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 37748
+  Sequence Number: 2795443011
+  Acknowledgment Number: 1825328228
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 57316
+  Sequence Number: 3146612785
+  Acknowledgment Number: 1149541323
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 10
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 42166
+  Sequence Number: 1043304559
+  Acknowledgment Number: 180677629
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 8080
+  Destination Port: 34214
+  Sequence Number: 3389975082
+  Acknowledgment Number: 762387577
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 844
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675704243
+  Acknowledgment Number: 1248653012
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675707067
+  Acknowledgment Number: 1248653012
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675708479
+  Acknowledgment Number: 1248653012
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675705655
+  Acknowledgment Number: 1248653012
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675708479
+  Acknowledgment Number: 1248653012
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675708776
+  Acknowledgment Number: 1248653192
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675708907
+  Acknowledgment Number: 1248653991
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675709012
+  Acknowledgment Number: 1248653991
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 42156
+  Sequence Number: 1885298864
+  Acknowledgment Number: 3037873174
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 42182
+  Sequence Number: 2300530594
+  Acknowledgment Number: 2275136711
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596697
+  Acknowledgment Number: 3500389816
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 317
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596697
+  Acknowledgment Number: 3500391956
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 317
+
+Captured TCP Header:
+  Source Port: 36676
+  Destination Port: 41892
+  Sequence Number: 2675709012
+  Acknowledgment Number: 1248653991
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 46810
+  Sequence Number: 682596826
+  Acknowledgment Number: 3500392061
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 317
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 37748
+  Sequence Number: 2795443128
+  Acknowledgment Number: 1825328228
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 42166
+  Sequence Number: 1043304697
+  Acknowledgment Number: 180677629
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 40618
+  Sequence Number: 3972441966
+  Acknowledgment Number: 3152363382
+  Data Offset: 8
+  Flags: 0x12
+  Window Size: 42340
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 40618
+  Sequence Number: 3972441967
+  Acknowledgment Number: 3152363823
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 40618
+  Sequence Number: 3972444791
+  Acknowledgment Number: 3152363823
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 40618
+  Sequence Number: 3972446197
+  Acknowledgment Number: 3152363823
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 40618
+  Sequence Number: 3972443379
+  Acknowledgment Number: 3152363823
+  Data Offset: 5
+  Flags: 0x10
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 48752
+  Destination Port: 40618
+  Sequence Number: 3972446197
+  Acknowledgment Number: 3152364083
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 21
+
+Captured TCP Header:
+  Source Port: 8080
+  Destination Port: 34214
+  Sequence Number: 3389975162
+  Acknowledgment Number: 762387694
+  Data Offset: 5
+  Flags: 0x18
+  Window Size: 844
+
+Captured TCP Header:
+  Source Port: 443
+  Destination Port: 57316
+  Sequence Number: 3146612785
+  Acknowledgment Number: 1149541323
+  Data Offset: 8
+  Flags: 0x10
+  Window Size: 10
+
+Captured TCP Header:
+  Source Port: 50001
+  Destination Port: 60860
+  Sequence Number: 1023501090
+  Acknowledgment Number: 2893644175
+  Data Offs
