@@ -4,11 +4,30 @@
 
 #include <linux/types.h>
 
-// 前向声明
-struct sk_buff;
+// IP 头部结构
+struct iphdr {
+    __u8    ihl:4, version:4;
+    __u8    tos;
+    __u16   tot_len;
+    __u16   id;
+    __u16   frag_off;
+    __u8    ttl;
+    __u8    protocol;
+    __u16   check;
+    __be32  saddr;
+    __be32  daddr;
+};
+
+// Socket buffer 结构（简化版 - 只包含我们需要字段）
+struct sk_buff {
+    __u64 reserved[8];
+    void *data;           // 数据指针（直接指向网络包数据）
+    void *head;
+    __u16 network_header;
+    __u16 transport_header;
+};
 
 // pt_regs 结构定义 (x86_64)
-// 参考：arch/x86/include/asm/ptrace.h
 struct pt_regs {
     __u64 r15;
     __u64 r14;
@@ -31,6 +50,6 @@ struct pt_regs {
     __u64 flags;
     __u64 sp;
     __u64 ss;
-} __attribute__((preserve_access_index));
+};
 
 #endif /* __VMLINUX_H__ */

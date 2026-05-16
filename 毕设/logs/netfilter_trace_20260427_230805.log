@@ -1,0 +1,413 @@
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7200 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d7200
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7200
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7200 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d7200
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7200
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7600 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d7600
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7600
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7600 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d7600
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7600
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c3610400 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7c3610400
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c3610400
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c3610400 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7c3610400
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c3610400
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448a00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8448a00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448a00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448a00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8448a00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448a00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448d00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8448d00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448d00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448d00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8448d00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448d00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58600 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58600
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58600
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58600 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58600
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58600
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58b00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58b00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58b00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58b00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58b00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58b00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448f00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8448f00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448f00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448f00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8448f00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8448f00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8449a00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8449a00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8449a00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8449a00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8449a00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8449a00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59f00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c59f00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59f00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59f00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c59f00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59f00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c3611300 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7c3611300
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c3611300
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c3611300 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7c3611300
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c3611300
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8449e00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8449e00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8449e00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8449e00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc9d8449e00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc9d8449e00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5700 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5700
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5700
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5700 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5700
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5700
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58f00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58f00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58f00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58f00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58f00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58f00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5b00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5b00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5b00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5b00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5b00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5b00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d6400 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d6400
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d6400
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d6400 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d6400
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d6400
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5e00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5e00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5e00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5e00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5e00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5e00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7b00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d7b00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7b00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7b00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d7b00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7b00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7100 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d7100
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7100 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc9eb9d7100
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc9eb9d7100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcb4cc76f00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dcb4cc76f00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcb4cc76f00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcb4cc76f00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dcb4cc76f00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcb4cc76f00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4500 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4500
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4500
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4500 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4500
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4500
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58800 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58800
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58800
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58800 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58800
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58800
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5500 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5500
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5500
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5500 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5500
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5500
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59c00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c59c00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59c00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59c00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c59c00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59c00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5700 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5700
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5700
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5700 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5700
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5700
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58600 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58600
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58600
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58600 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58600
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58600
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59000 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c59000
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59000
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59000 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c59000
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c59000
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4400 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4400
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4400
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4400 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4400
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4400
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58300 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58300
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58300
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58300 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58300
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58300
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4100
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4100
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcad75bf100 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dcad75bf100
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcad75bf100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcad75bf100 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dcad75bf100
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcad75bf100
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4900 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4900
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4900
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4900 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4900
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4900
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcad75bfd00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dcad75bfd00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcad75bfd00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcad75bfd00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dcad75bfd00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dcad75bfd00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4b00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4b00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4b00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4b00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4b00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4b00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58000 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58000
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58000
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58000 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58000
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58000
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5500 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5500
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5500
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5500 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5500
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5500
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58500 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58500
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58500
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58500 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d2c58500
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d2c58500
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5200 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5200
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5200
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5200 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5200
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5200
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacc100 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacc100
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacc100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacc100 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacc100
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacc100
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4a00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4a00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4a00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4a00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4a00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4a00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd500 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacd500
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd500
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd500 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacd500
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd500
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4100
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4100
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a9f00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a9f00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a9f00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a9f00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a9f00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a9f00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5a00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5a00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5a00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5a00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5a00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5a00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8100 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a8100
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8100 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a8100
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078ae00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7e078ae00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078ae00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078ae00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7e078ae00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078ae00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4400 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4400
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4400
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4400 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4400
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4400
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8f00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a8f00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8f00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8f00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a8f00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8f00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4700 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4700
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4700
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4700 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4700
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4700
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078b900 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7e078b900
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078b900
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078b900 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7e078b900
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078b900
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4800 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4800
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4800
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4800 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4800
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4800
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8500 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a8500
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8500
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8500 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a8500
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8500
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a9000 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a9000
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a9000
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a9000 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a9000
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a9000
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4d00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4d00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4d00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4d00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4d00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4d00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8300 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a8300
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8300
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8300 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8d19a8300
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8d19a8300
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5400 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5400
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5400
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5400 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5400
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5400
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078a200 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7e078a200
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078a200
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078a200 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7e078a200
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078a200
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078ad00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7e078ad00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078ad00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078ad00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7e078ad00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7e078ad00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4b00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4b00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4b00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4b00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4b00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4b00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c17a4e00 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7c17a4e00
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c17a4e00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c17a4e00 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7c17a4e00
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c17a4e00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5200 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5200
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5200
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5200 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5200
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5200
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd900 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacd900
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd900
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd900 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacd900
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd900
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5800 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5800
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5800
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5800 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5800
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5800
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd300 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacd300
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd300
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd300 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacd300
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacd300
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4100
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4100
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4100
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacc200 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacc200
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacc200
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacc200 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc8acacc200
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc8acacc200
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4a00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4a00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4a00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4a00 | hook_num:1
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a4a00
+[ip_local_deliver_finish] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a4a00
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c17a4900 | hook_num:3
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7c17a4900
+[ip_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c17a4900
+[nf_hook_slow] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c17a4900 | hook_num:4
+[ACCEPT] 192.168.18.156 -> 8.8.8.8 | skb=0xffff8dc7c17a4900
+[ip_finish_output] 192.168.18.156 -> 8.8.8.8 | skb:0xffff8dc7c17a4900
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5a00 | hook_num:0
+[ACCEPT] 8.8.8.8 -> 192.168.18.156 | skb=0xffff8dc7c17a5a00
+[ip_local_deliver] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5a00
+[nf_hook_slow] 8.8.8.8 -> 192.168.18.156 | skb:0xffff8dc7c17a5a00 | hook_num:1
+[ACCEPT] 8.8.8.8

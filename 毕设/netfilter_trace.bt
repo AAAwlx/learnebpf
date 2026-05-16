@@ -1,0 +1,192 @@
+#!/usr/bin/env bpftrace
+/*
+ * netfilter_trace.bt - 使用 bpftrace 跟踪 netfilter 钩子点
+ *
+ * 功能：
+ * 1. 提取 skb 指针
+ * 2. 获取 IP 头指针
+ * 3. 转换获取 IP 地址
+ * 4. 打印结果
+ *
+ * 使用方法：
+ *   sudo ./netfilter_trace.bt
+ */
+
+// ============== 辅助函数（使用内联方式模拟） ==============
+
+// 1. 提取 skb 指针 - 从不同函数的参数中获取 skb 地址
+// 注意：bpftrace 不支持真正的函数，这里在 kprobe 中直接实现
+
+// ============== Netfilter 钩子点跟踪 ==============
+
+// ip_rcv - 接收 IP 包时的第一个钩子
+kprobe:ip_rcv
+{
+    // 1. 提取 skb 指针（第一个参数）
+    $skb = (struct sk_buff *)arg0;
+
+    // 2. 获取 IP 头指针
+    // 在 ip_rcv 中，skb->data 指向 IP 头
+    $data_ptr = $skb->data;
+
+    // 3. 转换获取 IP 地址
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+    // 4. 打印结果
+    printf("[ip_rcv] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_rcv_finish - IP 包接收完成
+kprobe:ip_rcv_finish
+{
+    $skb = (struct sk_buff *)arg2;  // 第二个参数
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_rcv_finish] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_local_deliver - 本地投递
+kprobe:ip_local_deliver
+{
+    $skb = (struct sk_buff *)arg0;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_local_deliver] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_local_deliver_finish - 本地投递完成
+kprobe:ip_local_deliver_finish
+{
+    $skb = (struct sk_buff *)arg2;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_local_deliver_finish] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_forward - 转发数据包
+kprobe:ip_forward
+{
+    $skb = (struct sk_buff *)arg0;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_forward] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_mr_forward - 组播转发
+kprobe:ip_mr_forward
+{
+    $skb = (struct sk_buff *)arg2;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_mr_forward] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_local_out - 本地输出
+kprobe:ip_local_out
+{
+    $skb = (struct sk_buff *)arg2;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_local_out] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_output - IP 层输出
+kprobe:ip_output
+{
+    $skb = (struct sk_buff *)arg2;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_output] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_mc_output - 组播输出
+kprobe:ip_mc_output
+{
+    $skb = (struct sk_buff *)arg2;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_mc_output] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+// ip_finish_output - 输出完成
+kprobe:ip_finish_output
+{
+    $skb = (struct sk_buff *)arg2;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+
+    printf("[ip_finish_output] %s -> %s | skb:0x%llx\n",
+           $saddr, $daddr, (uint64)$skb);
+}
+
+kprobe:nf_hook_slow
+{
+    $skb = (struct sk_buff *)arg0;
+    @skb[tid] = $skb; 
+    $state = (struct nf_hook_state *)arg1;
+    $hook_num = $state->hook;
+    $data_ptr = $skb->data;
+    $iph = (struct iphdr *)$data_ptr;
+    $saddr = ntop($iph->saddr);
+    $daddr = ntop($iph->daddr);
+    printf("[nf_hook_slow] %s -> %s | skb:0x%llx | hook_num:%d\n",
+           $saddr, $daddr, (uint64)$skb, $hook_num);
+}
+
+kretprobe:nf_hook_slow
+{
+    $verdict = retval;    // 函数返回值（关键！）
+    $skb = @skb[tid];     // 取出进入时的skb
+    delete(@skb[tid]);    // 用完删除
+
+    // 解析IP
+    $s = (struct sk_buff *)$skb;
+    $iph = (struct iphdr *)$s->data;
+    $src = ntop($iph->saddr);
+    $dst = ntop($iph->daddr);
+
+    // 判断结果
+    if ($verdict == 1) {
+        printf("[ACCEPT] %s -> %s | skb=0x%lx\n", $src, $dst, (uint64)$skb);
+    } else if ($verdict == -1) {
+        printf("[DROP]   %s -> %s | skb=0x%lx\n", $src, $dst, (uint64)$skb);
+    } else {
+        printf("[DROP=%d] %s -> %s | skb=0x%lx\n", $verdict, $src, $dst, (uint64)$skb);
+    }
+}

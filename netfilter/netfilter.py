@@ -27,7 +27,11 @@ chain_flags = {
 # 全局存储跟踪数据
 skb_tracker = defaultdict(list)
 
-b = BPF(src_file="netfilter.c")
+# 添加编译标志来处理新内核的兼容性问题
+b = BPF(src_file="netfilter.c",
+        cflags=["-Wno-error=implicit-function-declaration",
+                "-Wno-error=incompatible-pointer-types",
+                "-Wno-error=unused-variable"])
 
 # 定义出口函数（触发完整链路打印）
 EXIT_FUNCTIONS = {

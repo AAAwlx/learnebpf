@@ -113,6 +113,18 @@ func main() {
    Compiled /home/ylx/桌面/wlx-dm/go/libbpfgo/bpf_bpfel.o
    Stripped /home/ylx/桌面/wlx-dm/go/libbpfgo/bpf_bpfel.o
    Wrote /home/ylx/桌面/wlx-dm/go/libbpfgo/bpf_bpfel.go
+
+
+      GOPACKAGE=main bpf2go -cc clang-10 -cflags '-O2 -g -Wall -Werror' -target bpfel bpf netfilter_trace.bpf.c \
+    -- -I /usr/src/debug/bpftool/bpftool/libbpf/include/uapi \
+       -I /usr/local/bpf/include \
+       -idirafter /usr/local/include \
+       -idirafter /usr/lib/llvm14/lib/clang/14.0.6/include \
+       -idirafter /usr/include/x86_64-linux-gnu \
+       -idirafter /usr/include
+   Compiled /home/ylx/桌面/wlx-dm/go/libbpfgo/bpf_bpfel.o
+   Stripped /home/ylx/桌面/wlx-dm/go/libbpfgo/bpf_bpfel.o
+   Wrote /home/ylx/桌面/wlx-dm/go/libbpfgo/bpf_bpfel.go
    ```
 
    在编译过程中可能遇到 clang 与 llvm 版本不匹配的问题。这时可以使用软链接的形式构建对应版本的文件。
